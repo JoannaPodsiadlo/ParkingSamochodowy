@@ -9,19 +9,19 @@ namespace ParkingSamochodowy
 
     public class Rezerwacja
     {
-        private DateTime _dataOd;
-        private DateTime _dataDo;
-        private static int _cenaZaGodzine;
-        private Parking p;
-        private string wybraneMiejsce;
-        private List<string> _godziny;
+        public DateTime _dataOd;
+        public DateTime _dataDo;
+        public static int _cenaZaGodzine;
+        public Parking p;
+        public string wybraneMiejsce;
+        
 
         public DateTime DataOd { get => _dataOd; set => _dataOd = value; }
         public DateTime DataDo { get => _dataDo; set => _dataDo = value; }
         public static int CenaZaGodzine { get => _cenaZaGodzine; set => _cenaZaGodzine = value; }
         public Parking P { get => p; set => p = value; }
         public string WybraneMiejsce { get => wybraneMiejsce; set => wybraneMiejsce = value; }
-        public List<string> Godziny { get => _godziny; set => _godziny = value; }
+        
 
         static Rezerwacja()
         {
@@ -45,14 +45,7 @@ namespace ParkingSamochodowy
             var hours = ile.TotalHours;
             return hours * _cenaZaGodzine;
         }
-        public void DodajGodz()
-        {
-            for (int i = 1; i < 25; i++)
-            {
-                string h = i.ToString() + ":00";
-                _godziny.Add(h);
-            }
-        }
+      
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

@@ -113,5 +113,11 @@
       <Name>ParkingSamochodowy</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="parking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="autko.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -53,7 +53,7 @@ namespace gui1
                     uzytkownik = baza.ZnajdzKonto(IDTextBox.Text);
                     if (uzytkownik.PoprawnoscHaslo(HasloTextBox.Text))
                     {
-                        Rezerwacja okno = new Rezerwacja();
+                        Rezerwacja1 okno = new Rezerwacja1();
                         okno.ShowDialog();
                     }
                     else MessageBox.Show("Złe hasło, spróbuj ponownie");
