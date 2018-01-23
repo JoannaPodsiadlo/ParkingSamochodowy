@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:gui1"
         mc:Ignorable="d"
-        Title="Rezerwacja" Height="300" Width="300">
-    <Grid>
-        
-    </Grid>
+        Title="Rezerwacja" Height="443.325" Width="582">
+	<Grid Background="#FFF1B7B7">
+		<Calendar HorizontalAlignment="Left" VerticalAlignment="Top" Margin="358,10,0,0" Height="166" Width="183"/>
+		<Image Margin="79,188,95,10" Source="parking.png" Stretch="Fill"/>
+		<Label Content="Data od:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="79,27,0,0" Height="27" Width="107" Background="Beige"/>
+		<Label Content="Data do:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="79,71,0,0" Height="27" Width="107" Background="Beige"/>
+		<TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="210,31,0,0" Background="Beige"/>
+		<TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="210,71,0,0" Background="Beige"/>
+
+	</Grid>
 </Window>
