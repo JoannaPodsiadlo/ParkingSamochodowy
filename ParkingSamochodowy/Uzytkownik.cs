@@ -45,9 +45,8 @@ namespace ParkingSamochodowy
 
 		public override string ToString()
 		{
-			StringBuilder sb = new StringBuilder();
-			sb.AppendFormat(" {0},  {1}  {2} ID: {3}  haslo: {4}", _imie,_nazwisko,_nrRejestracyjnyPojazdu, _IDUzytkownika, _haslo);
-			return sb.ToString();
+      
+            return Imie + " " + Nazwisko + " " + NrRejestracyjnyPojazdu + " " + Haslo + " " + IDUzytkownika;
 		}
 
 		public bool PoprawnoscHaslo(string h)

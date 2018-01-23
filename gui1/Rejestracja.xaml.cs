@@ -16,19 +16,17 @@ using System.Threading;
 
 namespace gui1
 {
-    /// <summary>
-    /// Logika interakcji dla klasy Rejestracja.xaml
-    /// </summary>
+ 
     public partial class Rejestracja : Window
     {
-       
-        Uzytkownik nowyUzytkownik = new Uzytkownik();
-        
 
+        Uzytkownik nowyUzytkownik = new Uzytkownik();
+        BazaUzytkownikow baza1 = BazaUzytkownikow.OdczytajXML("baza");
+        //
         public Rejestracja()
         {
             InitializeComponent();
-        
+
         }
         public Rejestracja(Uzytkownik nowyUzytkownik) : this()
         {
@@ -36,13 +34,14 @@ namespace gui1
             ImieTB.Text = nowyUzytkownik.Imie;
             NazwiskoTB.Text = nowyUzytkownik.Nazwisko;
             NrRejTB.Text = nowyUzytkownik.NrRejestracyjnyPojazdu;
-            HasloTB.Text = nowyUzytkownik.Haslo;
             IDTB.Text = nowyUzytkownik.IDUzytkownika;
+            HasloTB.Text = nowyUzytkownik.Haslo;
+          
         }
-        
+
         private void ZarejestrujButton_Click(object sender, RoutedEventArgs e)
         {
-            if (ImieTB.Text == "" || NazwiskoTB.Text == "la" || NrRejTB.Text == "" || HasloTB.Text == "" || PowtorzHasloTB.Text == "")
+            if (ImieTB.Text == "" || NazwiskoTB.Text == "" || NrRejTB.Text == "" || HasloTB.Text == "" || PowtorzHasloTB.Text == "" || IDTB.Text=="")
             {
                 MessageBox.Show("Nie wypełniłeś wszystkich pól, spróbuj ponownie");
                 return;
@@ -53,17 +52,18 @@ namespace gui1
                 MessageBox.Show("Nieprawidłowe hasło, spróbuj ponownie");
                 return;
             }
-            else
-            {
+                else
+                {
                 nowyUzytkownik.Imie = ImieTB.Text;
                 nowyUzytkownik.Nazwisko = NazwiskoTB.Text;
                 nowyUzytkownik.NrRejestracyjnyPojazdu = NrRejTB.Text;
                 nowyUzytkownik.Haslo = HasloTB.Text;
                 nowyUzytkownik.IDUzytkownika =IDTB.Text;
-              
-                MessageBox.Show("Udało się! Możesz się teraz zalogować");
-                this.Close();
-            }
+                baza1.DodajKonto(nowyUzytkownik);
+                baza1.ZapiszXML("baza", baza1);
+                MessageBox.Show("Udało się! Aby sie zalogowac uruchom program ponownie");
+                Close();
+                 }
         }
     }
 }
