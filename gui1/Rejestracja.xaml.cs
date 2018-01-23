@@ -37,12 +37,12 @@ namespace gui1
             NazwiskoTB.Text = nowyUzytkownik.Nazwisko;
             NrRejTB.Text = nowyUzytkownik.NrRejestracyjnyPojazdu;
             HasloTB.Text = nowyUzytkownik.Haslo;
-            IDTB.Text = "1010";
+            IDTB.Text = nowyUzytkownik.IDUzytkownika;
         }
         
         private void ZarejestrujButton_Click(object sender, RoutedEventArgs e)
         {
-            if (ImieTB.Text == "" || NazwiskoTB.Text == "" || NrRejTB.Text == "" || HasloTB.Text == "" || PowtorzHasloTB.Text == "")
+            if (ImieTB.Text == "" || NazwiskoTB.Text == "la" || NrRejTB.Text == "" || HasloTB.Text == "" || PowtorzHasloTB.Text == "")
             {
                 MessageBox.Show("Nie wypełniłeś wszystkich pól, spróbuj ponownie");
                 return;
