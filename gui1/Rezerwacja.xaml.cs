@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ParkingSamochodowy;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,17 +18,25 @@ namespace gui1
     /// <summary>
     /// Logika interakcji dla klasy Rezerwacja.xaml
     /// </summary>
-    public partial class Rezerwacja : Window
+    public partial class Rezerwacja1 : Window
     {
-		Rezerwacja r1 = new Rezerwacja();
-		public Rezerwacja()
-        {
-            InitializeComponent();
+		
+		List<Button> przycisk;
+		List<int> _miejsca;
+
+		public List<Button> Przycisk { get => przycisk; set => przycisk = value; }
+		public List<int> Miejsca { get => _miejsca; set => _miejsca = value; }
+		public Rezerwacja1()
+		{
+			InitializeComponent();
 			kalendarz.Visibility = Visibility.Hidden;
 			kalendarz.DisplayDateStart = DateTime.Today;
-
-
-
+		}
+		public Rezerwacja1(Rezerwacja r):this()
+        {
+			textbox_data1.Text = Convert.ToString(r._dataOd);
+			textbox_data2.Text = Convert.ToString(r._dataDo);
+			textbox_miejsce.Text = Convert.ToString(r.wybraneMiejsce);
         }
 
 		private void button1_kalendarz_Click(object sender, RoutedEventArgs e)
@@ -59,6 +68,7 @@ namespace gui1
 			if (kalendarz.SelectedDate.HasValue)
 			{
 				textbox_data1.Text = kalendarz.SelectedDate.Value.ToString("dd/MM/yyyy");
+				
 			}
 			kalendarz.Visibility = Visibility.Hidden;
 			
