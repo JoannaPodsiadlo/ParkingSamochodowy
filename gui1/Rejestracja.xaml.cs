@@ -16,9 +16,7 @@ using System.Threading;
 
 namespace gui1
 {
-    /// <summary>
-    /// Logika interakcji dla klasy Rejestracja.xaml
-    /// </summary>
+ 
     public partial class Rejestracja : Window
     {
 
