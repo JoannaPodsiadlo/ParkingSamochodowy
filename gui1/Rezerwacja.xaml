@@ -7,12 +7,11 @@
         mc:Ignorable="d"
         Title="Rezerwacja" Height="443.325" Width="582">
 	<Grid Background="#FFF1B7B7">
-		<Calendar HorizontalAlignment="Left" VerticalAlignment="Top" Margin="358,10,0,0" Height="166" Width="183"/>
 		<Image Margin="29,122,33,10" Source="parking.png" Stretch="Fill"/>
-		<Label Content="Data od:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="79,27,0,0" Height="27" Width="107" Background="Beige"/>
-		<Label Content="Data do:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="79,71,0,0" Height="27" Width="107" Background="Beige"/>
-		<TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="210,31,0,0" Background="Beige"/>
-		<TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="210,71,0,0" Background="Beige"/>
+		<Label Content="Data od:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,10,0,0" Height="23" Width="110" Background="Beige"/>
+		<Label Content="Data do:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,51,0,0" Height="23" Width="110" Background="Beige"/>
+		<TextBox x:Name="textbox_data1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="210,10,0,0" Background="Beige"/>
+		<TextBox x:Name="textbox_data2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="210,51,0,0" Background="Beige"/>
 		<Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="58" Margin="31,157,0,0" Height="42" RenderTransformOrigin="0.5,0.5">
 			<Button.RenderTransform>
 				<TransformGroup>
@@ -109,7 +108,7 @@
 				<TransformGroup>
 					<ScaleTransform/>
 					<SkewTransform/>
-					<RotateTransform Angle="88.814"/>
+					<RotateTransform Angle="89.812"/>
 					<TranslateTransform/>
 				</TransformGroup>
 			</Button.RenderTransform>
@@ -119,7 +118,7 @@
 				<TransformGroup>
 					<ScaleTransform/>
 					<SkewTransform/>
-					<RotateTransform Angle="88.814"/>
+					<RotateTransform Angle="89.61"/>
 					<TranslateTransform/>
 				</TransformGroup>
 			</Button.RenderTransform>
@@ -129,7 +128,7 @@
 				<TransformGroup>
 					<ScaleTransform/>
 					<SkewTransform/>
-					<RotateTransform Angle="88.814"/>
+					<RotateTransform Angle="89.942"/>
 					<TranslateTransform/>
 				</TransformGroup>
 			</Button.RenderTransform>
@@ -184,6 +183,12 @@
 				</TransformGroup>
 			</Button.RenderTransform>
 		</Button>
+		<Button x:Name="button1_kalendarz" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="23" Margin="346,10,0,0" Click="button1_kalendarz_Click"/>
+		<Button x:Name="button2_kalendarz" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="23" Margin="346,51,0,0" RenderTransformOrigin="0.433,-0.391" Click="button2_kalendarz_Click"/>
+		<Label Content="Wybrane miejsce:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23" Width="110" Margin="80,94,0,0" Background="Beige"/>
+		<TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="210,94,0,0" Background="Beige"/>
+		<Button Content="Zatwierdź" HorizontalAlignment="Left" VerticalAlignment="Top" Width="92" Margin="430,48,0,0" Height="42"/>
+		<Calendar x:Name="kalendarz" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="385,12,0,0"/>
 
 	</Grid>
 </Window>
