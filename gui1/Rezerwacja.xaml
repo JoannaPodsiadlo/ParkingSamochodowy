@@ -8,11 +8,182 @@
         Title="Rezerwacja" Height="443.325" Width="582">
 	<Grid Background="#FFF1B7B7">
 		<Calendar HorizontalAlignment="Left" VerticalAlignment="Top" Margin="358,10,0,0" Height="166" Width="183"/>
-		<Image Margin="79,188,95,10" Source="parking.png" Stretch="Fill"/>
+		<Image Margin="29,122,33,10" Source="parking.png" Stretch="Fill"/>
 		<Label Content="Data od:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="79,27,0,0" Height="27" Width="107" Background="Beige"/>
 		<Label Content="Data do:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="79,71,0,0" Height="27" Width="107" Background="Beige"/>
 		<TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="210,31,0,0" Background="Beige"/>
 		<TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="210,71,0,0" Background="Beige"/>
+		<Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="58" Margin="31,157,0,0" Height="42" RenderTransformOrigin="0.5,0.5">
+			<Button.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="89.803"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Button.RenderTransform>
+			<Button.Background>
+				<ImageBrush ImageSource="autko.jpg" Stretch="UniformToFill"/>
+			</Button.Background>
+		</Button>
+		<Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="58" Margin="87,157,0,0" Height="42" RenderTransformOrigin="0.5,0.5">
+			<Button.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="89.803"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Button.RenderTransform>
+			<Button.Background>
+				<ImageBrush ImageSource="autko.jpg" Stretch="UniformToFill"/>
+			</Button.Background>
+		</Button>
+		<Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="58" Margin="145,156,0,0" Height="42" RenderTransformOrigin="0.5,0.5">
+			<Button.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="89.803"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Button.RenderTransform>
+			<Button.Background>
+				<ImageBrush ImageSource="autko.jpg" Stretch="UniformToFill"/>
+			</Button.Background>
+		</Button>
+		<Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="58" Margin="256,158,0,0" Height="42" RenderTransformOrigin="0.5,0.5">
+			<Button.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="89.803"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Button.RenderTransform>
+			<Button.Background>
+				<ImageBrush ImageSource="autko.jpg" Stretch="UniformToFill"/>
+			</Button.Background>
+		</Button>
+		<Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="58" Margin="426,157,0,0" Height="42" RenderTransformOrigin="0.5,0.5">
+			<Button.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="89.803"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Button.RenderTransform>
+			<Button.Background>
+				<ImageBrush ImageSource="autko.jpg" Stretch="UniformToFill"/>
+			</Button.Background>
+		</Button>
+		<Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="58" Margin="482,158,0,0" Height="42" RenderTransformOrigin="0.5,0.5">
+			<Button.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="89.803"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Button.RenderTransform>
+			<Button.Background>
+				<ImageBrush ImageSource="autko.jpg" Stretch="UniformToFill"/>
+			</Button.Background>
+		</Button>
+		<Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="66" Margin="72,271,0,0" Height="36" RenderTransformOrigin="0.5,0.5">
+			<Button.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="1.164"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Button.RenderTransform>
+			<Button.Background>
+				<ImageBrush ImageSource="autko.jpg" Stretch="UniformToFill"/>
+			</Button.Background>
+		</Button>
+		<Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="55" Margin="201,157,0,0" RenderTransformOrigin="0.5,0.5" Height="38">
+			<Button.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="88.814"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Button.RenderTransform>
+		</Button>
+		<Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="55" Margin="314,159,0,0" RenderTransformOrigin="0.5,0.5" Height="38">
+			<Button.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="88.814"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Button.RenderTransform>
+		</Button>
+		<Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="55" Margin="371,159,0,0" RenderTransformOrigin="0.5,0.5" Height="38">
+			<Button.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="88.814"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Button.RenderTransform>
+		</Button>
+		<Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="64" Margin="434,358,0,0" RenderTransformOrigin="0.5,0.5" Height="33">
+			<Button.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="179.569"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Button.RenderTransform>
+		</Button>
+		<Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="64" Margin="72,316,0,0" RenderTransformOrigin="0.5,0.5" Height="33">
+			<Button.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="179.569"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Button.RenderTransform>
+		</Button>
+		<Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="64" Margin="433,315,0,0" RenderTransformOrigin="0.5,0.5" Height="33">
+			<Button.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="179.569"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Button.RenderTransform>
+		</Button>
+		<Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="64" Margin="434,271,0,0" RenderTransformOrigin="0.5,0.5" Height="33">
+			<Button.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="179.569"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Button.RenderTransform>
+		</Button>
+		<Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="64" Margin="73,359,0,0" RenderTransformOrigin="0.5,0.5" Height="33">
+			<Button.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="179.569"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Button.RenderTransform>
+		</Button>
 
 	</Grid>
 </Window>
