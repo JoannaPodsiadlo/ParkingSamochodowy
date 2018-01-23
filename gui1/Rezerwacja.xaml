@@ -9,9 +9,7 @@
 	<Grid Background="#FFF1B7B7">
 		<Image Margin="29,122,33,10" Source="parking.png" Stretch="Fill"/>
 		<Label Content="Data od:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,10,0,0" Height="23" Width="110" Background="Beige"/>
-		<Label Content="Data do:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,51,0,0" Height="23" Width="110" Background="Beige"/>
-		<TextBox x:Name="textbox_data1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="210,10,0,0" Background="Beige"/>
-		<TextBox x:Name="textbox_data2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="210,51,0,0" Background="Beige"/>
+		<Label Content="Data do:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,47,0,0" Height="23" Width="110" Background="Beige"/>
 		<Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="58" Margin="31,157,0,0" Height="42" RenderTransformOrigin="0.5,0.5" Click="Button_Click">
 			<Button.RenderTransform>
 				<TransformGroup>
@@ -183,12 +181,11 @@
 				</TransformGroup>
 			</Button.RenderTransform>
 		</Button>
-		<Button x:Name="button1_kalendarz" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="23" Margin="346,10,0,0" Click="button1_kalendarz_Click"/>
-		<Button x:Name="button2_kalendarz" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="23" Margin="346,51,0,0" RenderTransformOrigin="0.433,-0.391" Click="button2_kalendarz_Click"/>
-		<Label Content="Wybrane miejsce:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23" Width="110" Margin="80,94,0,0" Background="Beige"/>
-		<TextBox x:Name="textbox_miejsce" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="210,94,0,0" Background="Beige"/>
+		<Label Content="Wybrane miejsce:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23" Width="110" Margin="80,79,0,0" Background="Beige"/>
+		<TextBox x:Name="textbox_miejsce" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="210,79,0,0" Background="Beige"/>
 		<Button Content="Zatwierdź" HorizontalAlignment="Left" VerticalAlignment="Top" Width="92" Margin="430,48,0,0" Height="42"/>
-		<Calendar x:Name="kalendarz" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="385,10,0,0"/>
+		<DatePicker x:Name="DP_dataOD" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="210,10,0,0" Height="23" Width="120"/>
+		<DatePicker x:Name="DP_dataDo" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="210,48,0,0" Height="26" Width="120"/>
 
 	</Grid>
 </Window>
