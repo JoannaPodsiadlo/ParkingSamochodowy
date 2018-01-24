@@ -16,6 +16,8 @@ namespace ParkingSamochodowy
         public Parking()
         {
             parking = new List<MiejsceParkingowe>();
+			
+
         }
 
         public void StworzParking()
