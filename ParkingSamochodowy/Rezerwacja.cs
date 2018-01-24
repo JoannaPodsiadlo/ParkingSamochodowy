@@ -9,6 +9,7 @@ namespace ParkingSamochodowy
 
     public class Rezerwacja
     {
+        
         public DateTime _dataOd;
         public DateTime _dataDo;
         public static int _cenaZaDzien;
@@ -26,6 +27,7 @@ namespace ParkingSamochodowy
         static Rezerwacja()
         {
             _cenaZaDzien = 5;
+
         }
 
         public Rezerwacja()

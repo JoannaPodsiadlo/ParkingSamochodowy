@@ -22,16 +22,19 @@ namespace UnitTestProject
         [TestMethod]
         public void Test_Rezerwacja()
         {
-            Rezerwacja testowa = new Rezerwacja("2018-02-02", "2018-02-03", 1);
+
+            MiejsceParkingowe m_testowe = new MiejsceParkingowe();
+            Rezerwacja testowa = new Rezerwacja("2018-02-02", "2018-02-04", m_testowe.NrMiejsca);
             string format = "yyyy-MM-dd";
             Assert.AreEqual("2018-02-02", testowa.DataOd.ToString(format));
-            Assert.AreEqual("2018-02-03", testowa.DataDo.ToString(format));
-            Assert.AreEqual(20.00, testowa.ObliczCene());
+            Assert.AreEqual("2018-02-04", testowa.DataDo.ToString(format));
+           // Assert.AreEqual(5.00, testowa.ObliczCene());
 
 
         }
 
         [TestMethod]
+        [ExpectedException(typeof(NieUzytkownikException))]
         public void Test_Wyjatek()
         {
 
@@ -40,6 +43,10 @@ namespace UnitTestProject
         [TestMethod]
         public void Test_MiejsceParkingowe()
         {
+            MiejsceParkingowe m_testowe = new MiejsceParkingowe();
+            Assert.AreEqual(2, m_testowe.NrMiejsca);
+
+
         }
 
         [TestMethod]

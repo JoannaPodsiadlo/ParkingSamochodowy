@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ParkingSamochodowy
 {
-    class NieUzytkownikException:Exception
+    public class NieUzytkownikException:Exception
     {
         public NieUzytkownikException()
         {

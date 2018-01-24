@@ -10,7 +10,8 @@ namespace ParkingSamochodowy
 	[Serializable]
 	public class Uzytkownik: ICloneable, IComparable
 	{
-		private string _imie;
+        int liczbaRezerwacji;
+        private string _imie;
 		private string _nazwisko;
 		private string _haslo;
 		private string _nrRejestracyjnyPojazdu;
@@ -25,10 +26,13 @@ namespace ParkingSamochodowy
 
 		public Uzytkownik()
 		{
-			_mojeRezerwacje = new List<Rezerwacja>();
-		}
+			this._mojeRezerwacje = new List<Rezerwacja>();
+            this.liczbaRezerwacji = 0;
+        }
 
-		public Uzytkownik(string imie, string nazwisko, string haslo, string nrRejestracyjnyPojazdu, string idUzytkownika):this()
+        public int LiczbaRezerwacji { get => liczbaRezerwacji; set => liczbaRezerwacji = value; }
+
+        public Uzytkownik(string imie, string nazwisko, string haslo, string nrRejestracyjnyPojazdu, string idUzytkownika):this()
 		{
 			_mojeRezerwacje = null;
 			_imie = imie;
@@ -41,6 +45,7 @@ namespace ParkingSamochodowy
 		public void Zarezerwuj(Rezerwacja r)
 		{
 			_mojeRezerwacje.Add(r);
+            liczbaRezerwacji++;
 		}
 
 		public override string ToString()
