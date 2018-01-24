@@ -161,8 +161,17 @@ namespace gui1
 
         private void Button_Click_10(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Udało się zarezerwować wybrane miejsce!");
-            Close();
+			if (textbox_miejsce.Text == "")
+			{
+				MessageBox.Show("Nie wybrales miejsca!");
+				return;
+			}
+			else
+
+			{
+				MessageBox.Show("Udało się zarezerwować wybrane miejsce!");
+				Close();
+			}
         }
 
         
