@@ -186,8 +186,8 @@
 		<Button Content="Zatwierdź" HorizontalAlignment="Left" VerticalAlignment="Top" Width="92" Margin="398,60,0,0" Height="42"/>
 		<DatePicker x:Name="DP_dataOD" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="210,10,0,0" Height="23" Width="120"/>
 		<DatePicker x:Name="DP_dataDo" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="210,48,0,0" Height="26" Width="120"/>
-		<Label Content="Do zapłaty:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="361,15,0,0" Height="26" Width="73" Background="Beige"/>
 		<TextBox x:Name="tb_zaplata" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="$$$" VerticalAlignment="Top" Width="97" Margin="444,18,0,0"/>
+		<Button Content="Do zaplaty" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="352,19,0,0" Click="Button_Click_9"/>
 
 	</Grid>
 </Window>

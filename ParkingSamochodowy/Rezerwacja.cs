@@ -25,7 +25,7 @@ namespace ParkingSamochodowy
 
         static Rezerwacja()
         {
-            _cenaZaGodzine = 3;
+            _cenaZaGodzine = 5;
         }
 
         public Rezerwacja()
@@ -42,8 +42,8 @@ namespace ParkingSamochodowy
         public double ObliczCene()
         {
             var ile = (_dataDo - _dataOd);
-            var hours = ile.TotalHours;
-            return hours * _cenaZaGodzine;
+            var days = ile.TotalDays;
+            return days * _cenaZaGodzine;
         }
       
         public override string ToString()

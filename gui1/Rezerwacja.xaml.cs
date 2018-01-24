@@ -37,9 +37,11 @@ namespace gui1
 		}
 		public Rezerwacja1(Rezerwacja r):this()
         {
-			DP_dataOD.Text = Convert.ToString(r._dataOd);
-			DP_dataDo.Text = Convert.ToString(r._dataDo);
+			r._dataOd=Convert.ToDateTime(DP_dataOD.Text);
+			r._dataDo = Convert.ToDateTime(DP_dataDo.Text);
 			textbox_miejsce.Text = Convert.ToString(r.wybraneMiejsce);
+			r.ObliczCene();
+			tb_zaplata.Text = "{0:c}" + r.ObliczCene();
         }
 		
 		private void Button_Click(object sender, RoutedEventArgs e)
@@ -72,6 +74,7 @@ namespace gui1
 		private void Button_Click_3(object sender, RoutedEventArgs e)
 		{
 			textbox_miejsce.Text = parking.WybierzMiejsce(4);
+			r.wybraneMiejsce = parking.WybierzMiejsce(4);
 		}
 
 		private void Button_Click_4(object sender, RoutedEventArgs e)
@@ -143,6 +146,15 @@ namespace gui1
 			m.Zajmij();
 			parking.DodajMiejsce(m);
 			MessageBox.Show("Miejsce zajete!");
+		}
+
+		private void Button_Click_9(object sender, RoutedEventArgs e)
+		{
+			r._dataOd = Convert.ToDateTime(DP_dataOD.Text);
+			r._dataDo = Convert.ToDateTime(DP_dataDo.Text);
+			StringBuilder sb = new StringBuilder();
+			sb.AppendFormat("{0:c}", r.ObliczCene());
+			tb_zaplata.Text = sb.ToString();
 		}
 	}
 }
