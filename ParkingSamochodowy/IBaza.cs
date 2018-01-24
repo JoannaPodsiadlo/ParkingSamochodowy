@@ -13,7 +13,5 @@ namespace ParkingSamochodowy
 		void Sortuj();
 		bool CzyJestUzytkownikiem(string id);
 		
-
-
 	}
 }

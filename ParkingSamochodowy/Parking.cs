@@ -16,10 +16,11 @@ namespace ParkingSamochodowy
         public Parking()
         {
             parking = new List<MiejsceParkingowe>();
-			
-
         }
 
+		/// <summary>
+		/// Metoda tworzaca parking majacy 15 miejsc
+		/// </summary>
         public void StworzParking()
         {
 			parking.Clear();
@@ -29,20 +30,27 @@ namespace ParkingSamochodowy
                 parking.Add(m);
             }
         }
-		public void DodajMiejsce(MiejsceParkingowe m)
-		{
-			parking.Add(m);
-		}
+		/// <summary>
+		/// Parkowanie, rezerwowanie miejsca
+		/// </summary>
+		/// <param name="a"></param>
+		/// <returns></returns>
         public string WybierzMiejsce(int a)
         {
             MiejsceParkingowe m = parking.Find(mce => mce.NrMiejsca.Equals(a));
             m.Zajmij();
             return m.NrMiejsca.ToString();
         }
+		/// <summary>
+		/// Pobieranie numeru miejsca, pomocnicza funkcja do GUI
+		/// </summary>
+		/// <param name="a"></param>
+		/// <returns></returns>
 		public MiejsceParkingowe ZwrocMiejsce(int a)
 		{
 			return parking[a];
 		}
+	
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
