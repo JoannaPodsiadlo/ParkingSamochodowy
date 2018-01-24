@@ -5,21 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:gui1"
         mc:Ignorable="d"
-        Title="Rejestracja" Height="300" Width="300">
-    <Grid Background="LightPink">
-        <Label Content="Imie:" HorizontalAlignment="Left" Height="27" Margin="10,10,0,0" VerticalAlignment="Top" Width="146" />
-        <Label Content="Nazwisko:" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top"/>
-        <Label Content="Nr Rejestracyjny Pojazdu:" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top" Width="146"/>
-        <Label Content="Hasło:" HorizontalAlignment="Left" Margin="24,159,0,0" VerticalAlignment="Top" Width="108"/>
-        <Label Content="Powtórz hasło:" HorizontalAlignment="Left" Margin="24,192,0,0" VerticalAlignment="Top" Width="108" Height="24"/>
-        <TextBox x:Name="ImieTB" HorizontalAlignment="Left" Height="27" Margin="104,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178"/>
-        <TextBox x:Name="NazwiskoTB" HorizontalAlignment="Left" Height="29" Margin="104,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178"/>
-        <TextBox x:Name="NrRejTB" HorizontalAlignment="Left" Height="26" Margin="161,76,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="121"/>
-        <TextBox x:Name="HasloTB" HorizontalAlignment="Left" Height="26" Margin="137,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="102"/>
-        <TextBox x:Name="PowtorzHasloTB" HorizontalAlignment="Left" Height="26" Margin="137,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="102"/>
-        <Button x:Name="ZarejestrujButton" Content="Zarejestruj" HorizontalAlignment="Left" Height="26" Margin="67,233,0,0" VerticalAlignment="Top" Width="152" Click="ZarejestrujButton_Click"/>
-        <Label Content="ID:" HorizontalAlignment="Left" Height="25" Margin="24,129,0,0" VerticalAlignment="Top" Width="108"/>
-        <TextBox x:Name="IDTB" HorizontalAlignment="Left" Height="25" Margin="137,129,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="102"/>
+        Title="Rejestracja" Height="300" Width="300" Background="#FF9E5E68">
+    <Grid Background="#FFCDADB2">
+        <Rectangle Fill="#FF9E5E68" HorizontalAlignment="Left" Height="249" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="272" Opacity="0.7" StrokeDashArray="0"/>
+        <Label Content="Hasło:" HorizontalAlignment="Left" Margin="46,159,0,0" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.667,0.453" Background="#FFCDA4A4" Opacity="0.8"/>
+        <Label Content="Powtórz hasło:" HorizontalAlignment="Left" Margin="46,190,0,0" VerticalAlignment="Top" Width="86" Height="26" Background="#FFCDA4A4" Opacity="0.8"/>
+        <TextBox x:Name="ImieTB" HorizontalAlignment="Left" Height="27" Margin="46,32,0,0" TextWrapping="Wrap" Text="Imie" VerticalAlignment="Top" Width="202" Foreground="#FFAC767E" FontWeight="Bold"/>
+        <TextBox x:Name="NazwiskoTB" HorizontalAlignment="Left" Height="29" Margin="46,64,0,0" TextWrapping="Wrap" Text="Nazwisko" VerticalAlignment="Top" Width="202" FontWeight="Bold" Foreground="#FFAC767E"/>
+        <TextBox x:Name="NrRejTB" HorizontalAlignment="Left" Height="26" Margin="46,98,0,0" TextWrapping="Wrap" Text="Nr Rejestracyjny" VerticalAlignment="Top" Width="202" FontWeight="Bold" Foreground="#FFAC767E"/>
+        <TextBox x:Name="HasloTB" HorizontalAlignment="Left" Height="26" Margin="137,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name="PowtorzHasloTB" HorizontalAlignment="Left" Height="26" Margin="137,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="111"/>
+        <Button x:Name="ZarejestrujButton" Content="Zarejestruj" HorizontalAlignment="Left" Height="26" Margin="137,221,0,0" VerticalAlignment="Top" Width="111" Click="ZarejestrujButton_Click" Background="#FF6E4047" BorderThickness="0"/>
+        <Label Content="ID:" HorizontalAlignment="Left" Height="25" Margin="46,129,0,0" VerticalAlignment="Top" Width="86" Opacity="0.8" Background="#FFCDA4A4"/>
+        <TextBox x:Name="IDTB" HorizontalAlignment="Left" Height="25" Margin="137,129,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="111"/>
+        <Button x:Name="AnulujButton" Content="Anuluj" HorizontalAlignment="Left" Height="26" Margin="46,221,0,0" VerticalAlignment="Top" Width="86" Click="AnulujButton_Click" Background="#FF6E4047" BorderThickness="0"/>
 
     </Grid>
 </Window>

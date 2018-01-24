@@ -41,7 +41,7 @@ namespace gui1
 
         private void ZarejestrujButton_Click(object sender, RoutedEventArgs e)
         {
-            if (ImieTB.Text == "" || NazwiskoTB.Text == "" || NrRejTB.Text == "" || HasloTB.Text == "" || PowtorzHasloTB.Text == "" || IDTB.Text=="")
+            if (ImieTB.Text == "Imie" || NazwiskoTB.Text == "Nazwisko" || NrRejTB.Text == "Nr Rejestracyjny" || HasloTB.Text == "" || PowtorzHasloTB.Text == "" || IDTB.Text=="")
             {
                 MessageBox.Show("Nie wypełniłeś wszystkich pól, spróbuj ponownie");
                 return;
@@ -64,6 +64,11 @@ namespace gui1
                 MessageBox.Show("Udało się! Aby sie zalogowac uruchom program ponownie");
                 Close();
                  }
+        }
+
+        private void AnulujButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }
