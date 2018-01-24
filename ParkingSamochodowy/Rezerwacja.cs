@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace ParkingSamochodowy
         public Rezerwacja()
         {
             P = new Parking();
-           // P.StworzParking();
+           P.StworzParking();
         }
         public Rezerwacja(string dataOd, string dataDo, int a) : this()
         {
@@ -58,5 +59,9 @@ namespace ParkingSamochodowy
             sb.AppendFormat("Miejsce numer:" + wybraneMiejsce);
             return sb.ToString();
         }
+        [Key]
+        public int RezerwacjaId { get; set; }
+        public int UzytkownikId { get; set; }
+        public virtual Uzytkownik Uzytkownik { get; set; }
     }
 }

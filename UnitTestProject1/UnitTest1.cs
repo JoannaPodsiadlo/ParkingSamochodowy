@@ -10,12 +10,13 @@ namespace UnitTestProject
         [TestMethod]
         public void Test_Uzytkownik()
         {
+            //MiejsceParkingowe m_testowe = new MiejsceParkingowe();
             Uzytkownik testowy = new Uzytkownik("test_imie", "test_nazwisko", "test_hasło", "test_nr", "test_id");
             Assert.AreEqual("test_imie", testowy.Imie);
             Assert.AreEqual("test_nazwisko", testowy.Nazwisko);
-            //Rezerwacja testowa_rezerwacja = new Rezerwacja("2018-02-02", "2018-02-03", 3);
+            //Rezerwacja testowa_rezerwacja = new Rezerwacja("2018-02-02", "2018-02-03", m_testowe.NrMiejsca);
             //testowy.Zarezerwuj(testowa_rezerwacja);         
-            //Assert.AreEqual(1, testowy.LiczbaRezerwacji);
+            //Assert.AreEqual(1, testowy._mojeRezerwacje.Count);
 
         }
 
@@ -24,39 +25,37 @@ namespace UnitTestProject
         {
 
             MiejsceParkingowe m_testowe = new MiejsceParkingowe();
-            Rezerwacja testowa = new Rezerwacja("2018-02-02", "2018-02-04", m_testowe.NrMiejsca);
+            Rezerwacja testowa = new Rezerwacja("2018-02-02", "2018-02-04",m_testowe.NrMiejsca);
             string format = "yyyy-MM-dd";
             Assert.AreEqual("2018-02-02", testowa.DataOd.ToString(format));
             Assert.AreEqual("2018-02-04", testowa.DataDo.ToString(format));
-           // Assert.AreEqual(5.00, testowa.ObliczCene());
-
-
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(NieUzytkownikException))]
-        public void Test_Wyjatek()
-        {
-
-        }
+           
+        }       
 
         [TestMethod]
         public void Test_MiejsceParkingowe()
         {
             MiejsceParkingowe m_testowe = new MiejsceParkingowe();
             Assert.AreEqual(2, m_testowe.NrMiejsca);
-
-
         }
 
         [TestMethod]
         public void Test_Parking()
         {
+            MiejsceParkingowe m_testowe = new MiejsceParkingowe();
+            Parking p_testowy = new Parking();
+            p_testowy.DodajMiejsce(m_testowe);
+            Assert.AreEqual(1, p_testowy.Parking1.Count);
         }
 
         [TestMethod]
-        public void Test_BazaUzytkownikow()
+        public void Uzytkownik_rezerwacja()
         {
+            MiejsceParkingowe m_testowe = new MiejsceParkingowe();
+            Uzytkownik testowy = new Uzytkownik("test_imie", "test_nazwisko", "test_hasło", "test_nr", "test_id");
+            Rezerwacja testowa_rezerwacja = new Rezerwacja("2018-02-02", "2018-02-03", m_testowe.NrMiejsca);
+            testowy.Zarezerwuj(testowa_rezerwacja);         
+            Assert.AreEqual(1, testowy._mojeRezerwacje.Count);
         }
     }
 }
