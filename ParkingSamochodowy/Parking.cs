@@ -10,7 +10,7 @@ namespace ParkingSamochodowy
     public class Parking
     {
 
-        private List<MiejsceParkingowe> parking;
+        public List<MiejsceParkingowe> parking;
         public List<MiejsceParkingowe> Parking1 { get => parking; set => parking = value; }
         public const int ILOSC_MIEJSC = 16;
         public Parking()
@@ -37,6 +37,10 @@ namespace ParkingSamochodowy
             m.Zajmij();
             return m.NrMiejsca.ToString();
         }
+		public MiejsceParkingowe ZwrocMiejsce(int a)
+		{
+			return parking[a];
+		}
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
