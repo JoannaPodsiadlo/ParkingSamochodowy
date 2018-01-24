@@ -31,7 +31,7 @@ namespace ParkingSamochodowy
         public Rezerwacja()
         {
             P = new Parking();
-            P.StworzParking();
+           // P.StworzParking();
         }
         public Rezerwacja(string dataOd, string dataDo, int a) : this()
         {

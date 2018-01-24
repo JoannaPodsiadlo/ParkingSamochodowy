@@ -20,13 +20,17 @@ namespace ParkingSamochodowy
 
         public void StworzParking()
         {
+			parking.Clear();
             for (int i = 0; i < ILOSC_MIEJSC; i++)
             {
                 MiejsceParkingowe m = new MiejsceParkingowe();
                 parking.Add(m);
             }
         }
-
+		public void DodajMiejsce(MiejsceParkingowe m)
+		{
+			parking.Add(m);
+		}
         public string WybierzMiejsce(int a)
         {
             MiejsceParkingowe m = parking.Find(mce => mce.NrMiejsca.Equals(a));
