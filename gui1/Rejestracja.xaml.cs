@@ -22,7 +22,7 @@ namespace gui1
 
         Uzytkownik nowyUzytkownik = new Uzytkownik();
         BazaUzytkownikow baza1 = BazaUzytkownikow.OdczytajXML("baza");
-        //
+        
         public Rejestracja()
         {
             InitializeComponent();

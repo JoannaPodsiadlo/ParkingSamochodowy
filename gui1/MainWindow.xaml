@@ -6,20 +6,34 @@
         xmlns:local="clr-namespace:gui1"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid Background="DimGray">
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded"/>
+    </Window.Triggers>
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="tlo.png"/>
+        </Grid.Background>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="108*"/>
             <ColumnDefinition Width="409*"/>
         </Grid.ColumnDefinitions>
 
-        <Label Grid.ColumnSpan="2" Content="REZERWACJA MIEJSC PARKINGOWYCH &#xD;&#xA;     DLA PRACOWNIKÓW FIRMY X" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="56" Margin="15,10,5,0" VerticalAlignment="Top" Width="497" FontSize="18" FontFamily="Arial"  FontWeight="DemiBold" Background="Gray"  />
-        <Button x:Name="ZalogujButton" Content="Zaloguj" Grid.Column="1" HorizontalAlignment="Left" Height="31" Margin="277,202,0,0" VerticalAlignment="Top" Width="100" Click="ZalogujButton_Click"/>
-        <TextBox x:Name="IDTextBox"  Grid.Column="1" HorizontalAlignment="Left" Height="36" Background="LightGray" Margin="22,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="355" />
-        <TextBox x:Name="HasloTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="36" Background="LightGray" Margin="22,148,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="355"/>
-        <Label x:Name="IDLabel" Grid.ColumnSpan="2" Content="ID:" FontSize="19" FontWeight="DemiBold" HorizontalAlignment="Left" Height="36" Margin="40,96,0,0" VerticalAlignment="Top" Width="90"/>
-        <Label x:Name="HasloLabel" Content="Hasło:" FontSize="19" FontWeight="DemiBold" HorizontalAlignment="Left" Margin="40,148,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="85" Height="36"/>
-        <Button x:Name="NoweKontoButton" Content="Chcę założyć nowe konto" HorizontalAlignment="Left" Height="31" Margin="22,202,0,0" VerticalAlignment="Top" Width="199" Grid.Column="1" Click="NoweKontoButton_Click"/>
+        <Rectangle HorizontalAlignment="Left" Height="299" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="286" Grid.Column="1" Opacity="0.8" StrokeDashArray="0" ClipToBounds="True">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF231F2B" Offset="0"/>
+                    <GradientStop Color="#FF9DB1E6" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Button x:Name="ZalogujButton" Content="Zaloguj" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="80,202,0,0" VerticalAlignment="Top" Width="190" Click="ZalogujButton_Click" Background="#FF4D5066" BorderThickness="0"/>
+        <Label x:Name="IDLabel" Content="ID:" FontSize="13" FontWeight="Bold" HorizontalAlignment="Left" Height="36" Margin="48,102,0,0" VerticalAlignment="Top" Width="90" Grid.Column="1"/>
+        <Label x:Name="HasloLabel" Content="HASŁO:" FontWeight="Bold" HorizontalAlignment="Left" Margin="26,156,0,0" VerticalAlignment="Top" Width="85" Height="36" Grid.Column="1"/>
+        <Button x:Name="NoweKontoButton" Content="Rejestracja" HorizontalAlignment="Left" Height="30" Margin="80,237,0,0" VerticalAlignment="Top" Width="190" Click="NoweKontoButton_Click" Grid.Column="1" Background="#FF4D5066" BorderThickness="0" SnapsToDevicePixels="True"/>
+        <TextBox x:Name="HasloTextBox" HorizontalAlignment="Left" Height="30" Margin="80,156,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="191" Opacity="0.6" Background="#FFC8C8D9" Grid.Column="1" BorderThickness="0"/>
+        <TextBox x:Name="IDTextBox" HorizontalAlignment="Left" Height="31" Background="#FFBABBCD" Margin="80,102,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="190" Opacity="0.6" Grid.Column="1" BorderThickness="0" />
+        <Label Content="&#x9;REZERWACJA &#xD;&#xA;    MIEJSC PARKINGOWYCH" Grid.Column="1" HorizontalAlignment="Left" Height="59" Margin="26,27,0,0" VerticalAlignment="Top" Width="256" Background="#FF20202B" Opacity="0.8" FontFamily="Segoe UI Semibold" FontSize="18" Foreground="#FFCFD6F5"/>
 
     </Grid>
 </Window>

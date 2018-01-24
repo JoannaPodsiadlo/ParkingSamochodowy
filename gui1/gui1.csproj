@@ -119,5 +119,11 @@
   <ItemGroup>
     <Resource Include="autko.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="tlo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
