@@ -38,7 +38,7 @@ namespace gui1
 
         private void ZalogujButton_Click(object sender, RoutedEventArgs e)
         {
-            if (IDTextBox.Text == "" || HasloTextBox.Text == "")
+            if (IDTextBox.Text == "" || HasloTextBox.Password == "")
             {
                 MessageBox.Show("Nie uzupelniles wszystkich pól");
                 return;
@@ -51,7 +51,7 @@ namespace gui1
                 {
                     baza.CzyJestUzytkownikiem(IDTextBox.Text);
                     uzytkownik = baza.ZnajdzKonto(IDTextBox.Text);
-                    if (uzytkownik.PoprawnoscHaslo(HasloTextBox.Text))
+                    if (uzytkownik.PoprawnoscHaslo(HasloTextBox.Password))
                     {
                         Rezerwacja1 okno = new Rezerwacja1();
                         okno.ShowDialog();

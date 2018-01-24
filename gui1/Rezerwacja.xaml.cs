@@ -155,6 +155,18 @@ namespace gui1
 			StringBuilder sb = new StringBuilder();
 			sb.AppendFormat("{0:c}", r.ObliczCene());
 			tb_zaplata.Text = sb.ToString();
+        
 		}
-	}
+
+
+        private void Button_Click_10(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Udało się zarezerwować wybrane miejsce!");
+            Close();
+        }
+
+        
+
+        
+    }
 }

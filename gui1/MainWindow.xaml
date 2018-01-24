@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:gui1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="PARKING" Height="350" Width="525" Background="#FF2F3030">
     <Window.Triggers>
         <EventTrigger RoutedEvent="FrameworkElement.Loaded"/>
     </Window.Triggers>
@@ -29,11 +29,12 @@
         </Rectangle>
         <Button x:Name="ZalogujButton" Content="Zaloguj" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="60,202,0,0" VerticalAlignment="Top" Width="190" Click="ZalogujButton_Click" Background="#FF4D5066" BorderThickness="0"/>
         <Label x:Name="IDLabel" Content="ID " FontSize="14" HorizontalAlignment="Left" Height="36" Margin="60,108,0,0" VerticalAlignment="Top" Width="85" Grid.Column="1" RenderTransformOrigin="0.506,0.243"/>
-        <Label x:Name="HasloLabel" Content="HASŁO " HorizontalAlignment="Left" Margin="46,149,0,0" VerticalAlignment="Top" Width="85" Height="32" Grid.Column="1"/>
+        <Label x:Name="HasloLabel" Content="HASŁO " HorizontalAlignment="Left" Margin="45,144,0,0" VerticalAlignment="Top" Width="85" Height="32" Grid.Column="1"/>
         <Button x:Name="NoweKontoButton" Content="Rejestracja" HorizontalAlignment="Left" Height="30" Margin="60,237,0,0" VerticalAlignment="Top" Width="190" Click="NoweKontoButton_Click" Grid.Column="1" Background="#FF4D5066" BorderThickness="0" SnapsToDevicePixels="True"/>
-        <TextBox x:Name="HasloTextBox" HorizontalAlignment="Left" Height="19" Margin="100,154,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Opacity="0.6" Background="#FFC8C8D9" Grid.Column="1" BorderThickness="0" />
+
         <TextBox x:Name="IDTextBox" HorizontalAlignment="Left" Height="19" Background="#FFBABBCD" Margin="100,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Opacity="0.6" Grid.Column="1" BorderThickness="0" />
         <Label Content="&#x9;REZERWACJA &#xD;&#xA;    MIEJSC PARKINGOWYCH" Grid.Column="1" HorizontalAlignment="Left" Height="59" Margin="26,27,0,0" VerticalAlignment="Top" Width="256" Background="#FF20202B" Opacity="0.8" FontFamily="Segoe UI Semibold" FontSize="18" Foreground="#FFCFD6F5"/>
+        <PasswordBox x:Name="HasloTextBox" Password="" Grid.Column="1" HorizontalAlignment="Left" Height="19" Margin="100,149,0,0" VerticalAlignment="Top" Width="150" Background="#FF9093A9" BorderThickness="0" Opacity="0.9"/>
 
     </Grid>
 </Window>
