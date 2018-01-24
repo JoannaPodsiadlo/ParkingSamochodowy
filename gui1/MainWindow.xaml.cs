@@ -71,5 +71,7 @@ namespace gui1
             Rejestracja okno = new Rejestracja();
             okno.ShowDialog();
         }
+
+        
     }
 }
