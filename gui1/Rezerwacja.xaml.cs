@@ -29,59 +29,59 @@ namespace gui1
 		public Rezerwacja1()
 		{
 			InitializeComponent();
-			kalendarz.Visibility = Visibility.Hidden;
-			kalendarz.DisplayDateStart = DateTime.Today;
+			//kalendarz.Visibility = Visibility.Hidden;
+			//kalendarz.DisplayDateStart = DateTime.Today;
 		}
 		public Rezerwacja1(Rezerwacja r):this()
         {
-			textbox_data1.Text = Convert.ToString(r._dataOd);
-			textbox_data2.Text = Convert.ToString(r._dataDo);
+			DP_dataOD.Text = Convert.ToString(r._dataOd);
+			DP_dataDo.Text = Convert.ToString(r._dataDo);
 			textbox_miejsce.Text = Convert.ToString(r.wybraneMiejsce);
         }
 
-		private void button1_kalendarz_Click(object sender, RoutedEventArgs e)
-		{
-			if (kalendarz.Visibility == Visibility.Hidden)
-			{
-				kalendarz.Visibility = Visibility.Visible;
-			}
-			else
-			{
-				kalendarz.Visibility = Visibility.Hidden;
-			}
-		}
-
-		private void button2_kalendarz_Click(object sender, RoutedEventArgs e)
+		private void Button_Click(object sender, RoutedEventArgs e)
 		{
 
-			if (kalendarz.Visibility == Visibility.Hidden)
-			{
-				kalendarz.Visibility = Visibility.Visible;
-			}
-			else
-			{
-				kalendarz.Visibility = Visibility.Hidden;
-			}
-		}
-		private void double_click_calendar(object sender, MouseButtonEventArgs e)
-		{
-			if (kalendarz.SelectedDate.HasValue)
-			{
-				textbox_data1.Text = kalendarz.SelectedDate.Value.ToString("dd/MM/yyyy");
-				
-			}
-			kalendarz.Visibility = Visibility.Hidden;
-			
-		}
-		private void double2_click_calendar(object sender, MouseButtonEventArgs e)
-		{
-			if (kalendarz.SelectedDate.HasValue)
-			{
-				textbox_data2.Text = kalendarz.SelectedDate.Value.ToString("dd/MM/yyyy");
-			}
-			kalendarz.Visibility = Visibility.Hidden;
-			
 		}
 
+		private void Button_Click_1(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void Button_Click_2(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void Button_Click_3(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void Button_Click_4(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void Button_Click_5(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void Button_Click_6(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void Button_Click_7(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void Button_Click_8(object sender, RoutedEventArgs e)
+		{
+
+		}
 	}
 }
