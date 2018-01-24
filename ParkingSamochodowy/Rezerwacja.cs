@@ -11,21 +11,21 @@ namespace ParkingSamochodowy
     {
         public DateTime _dataOd;
         public DateTime _dataDo;
-        public static int _cenaZaGodzine;
+        public static int _cenaZaDzien;
         public Parking p;
         public string wybraneMiejsce;
         
 
         public DateTime DataOd { get => _dataOd; set => _dataOd = value; }
         public DateTime DataDo { get => _dataDo; set => _dataDo = value; }
-        public static int CenaZaGodzine { get => _cenaZaGodzine; set => _cenaZaGodzine = value; }
+        public static int CenaZaDzien { get => _cenaZaDzien; set => _cenaZaDzien = value; }
         public Parking P { get => p; set => p = value; }
         public string WybraneMiejsce { get => wybraneMiejsce; set => wybraneMiejsce = value; }
         
 
         static Rezerwacja()
         {
-            _cenaZaGodzine = 5;
+            _cenaZaDzien = 5;
         }
 
         public Rezerwacja()
@@ -43,7 +43,7 @@ namespace ParkingSamochodowy
         {
             var ile = (_dataDo - _dataOd);
             var days = ile.TotalDays;
-            return days * _cenaZaGodzine;
+            return days * _cenaZaDzien;
         }
       
         public override string ToString()
