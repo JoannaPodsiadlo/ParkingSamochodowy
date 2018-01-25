@@ -10,13 +10,11 @@ namespace UnitTestProject
         [TestMethod]
         public void Test_Uzytkownik()
         {
-            //MiejsceParkingowe m_testowe = new MiejsceParkingowe();
+            
             Uzytkownik testowy = new Uzytkownik("test_imie", "test_nazwisko", "test_hasło", "test_nr", "test_id");
             Assert.AreEqual("test_imie", testowy.Imie);
             Assert.AreEqual("test_nazwisko", testowy.Nazwisko);
-            //Rezerwacja testowa_rezerwacja = new Rezerwacja("2018-02-02", "2018-02-03", m_testowe.NrMiejsca);
-            //testowy.Zarezerwuj(testowa_rezerwacja);         
-            //Assert.AreEqual(1, testowy._mojeRezerwacje.Count);
+            
 
         }
 
@@ -42,11 +40,11 @@ namespace UnitTestProject
         
 
         [TestMethod]
-        public void Uzytkownik_rezerwacja()
+        public void Uzytkownik_Rezerwacja()
         {
-            
+            MiejsceParkingowe m_testowe = new MiejsceParkingowe();
             Uzytkownik testowy = new Uzytkownik("test_imie", "test_nazwisko", "test_hasło", "test_nr", "test_id");
-            Rezerwacja testowa_rezerwacja = new Rezerwacja("2018-02-02", "2018-02-03", 1);
+            Rezerwacja testowa_rezerwacja = new Rezerwacja("2018-02-02", "2018-02-03", m_testowe.NrMiejsca);
             testowy.Zarezerwuj(testowa_rezerwacja);         
             Assert.AreEqual(1, testowy._mojeRezerwacje.Count);
         }

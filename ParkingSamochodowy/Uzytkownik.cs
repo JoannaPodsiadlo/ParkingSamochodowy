@@ -36,7 +36,7 @@ namespace ParkingSamochodowy
 
         public Uzytkownik(string imie, string nazwisko, string haslo, string nrRejestracyjnyPojazdu, string idUzytkownika):this()
 		{
-			
+            
 			_imie = imie;
 			_nazwisko = nazwisko;
 			_haslo = haslo;
