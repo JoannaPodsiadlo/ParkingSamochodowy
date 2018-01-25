@@ -31,6 +31,7 @@ namespace ParkingSamochodowy
             u1.ZapiszDoBazy();
             u2.ZapiszDoBazy();
             u3.ZapiszDoBazy();
+            u1.WypiszUzytkownikow();
 			Console.ReadKey();
 		}
 	}
