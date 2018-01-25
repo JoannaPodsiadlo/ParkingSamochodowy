@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ParkingSamochodowy
 {
-
+    [Table("Rezerwacje")]
     public class Rezerwacja
     {
         
@@ -34,7 +35,7 @@ namespace ParkingSamochodowy
         public Rezerwacja()
         {
             P = new Parking();
-           // P.StworzParking();
+           P.StworzParking();
         }
         public Rezerwacja(string dataOd, string dataDo, int a) : this()
         {

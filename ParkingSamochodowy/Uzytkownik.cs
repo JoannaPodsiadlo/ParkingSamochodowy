@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -8,7 +9,8 @@ using System.Threading.Tasks;
 
 namespace ParkingSamochodowy
 {
-	[Serializable]
+    [Table("Uzytkownicy")]
+    [Serializable]
 	public class Uzytkownik: ICloneable, IComparable
 	{
         
@@ -90,5 +92,22 @@ namespace ParkingSamochodowy
         [Key]
         public int UzytkownikId { get; set; }
         
+        public void ZapiszDoBazy()
+        {
+            using (var db = new Model1())
+            {
+                db.Uzytkownik.Add(this);
+                db.SaveChanges();
+            }
+        }
+
+        public void WypiszUzytkownikow()
+        {
+            using (var db = new Model1())
+            {
+
+            }
+
+        }
     }
 }

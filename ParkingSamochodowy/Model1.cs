@@ -7,7 +7,7 @@ namespace ParkingSamochodowy
     public class Model1 : DbContext
     {
         // Your context has been configured to use a 'Model1' connection string from your application's 
-        // configuration file (App.config or Web.config). By default, this connection string targets the 
+        // configuration file (App.config or WeC:\Users\Lenovo\Source\Repos\ParkingSamochodowy4\ParkingSamochodowy\Model1.csb.config). By default, this connection string targets the 
         // 'ParkingSamochodowy.Model1' database on your LocalDb instance. 
         // 
         // If you wish to target a different database and/or database provider, modify the 'Model1' 
@@ -18,7 +18,7 @@ namespace ParkingSamochodowy
         }
 
         public virtual DbSet<Uzytkownik> Uzytkownik { get; set; }
-        public virtual DbSet<Rezerwacja> Rezerwacja { get; set; }
+        
         
 
         // Add a DbSet for each entity type that you want to include in your model. For more information 
