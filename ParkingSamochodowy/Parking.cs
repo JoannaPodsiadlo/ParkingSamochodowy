@@ -52,7 +52,10 @@ namespace ParkingSamochodowy
 		{
 			return parking[a];
 		}
-	
+		public void DodajMiejsce(MiejsceParkingowe m)
+		{
+			parking.Add(m);
+		}
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
