@@ -20,7 +20,7 @@ namespace ParkingSamochodowy
     public class BazaUzytkownikow : ICloneable, IBaza
 	{
         
-		private List<Uzytkownik> _baza;
+		public List<Uzytkownik> _baza;
       
 		public List<Uzytkownik> Baza { get => _baza; set => _baza = value; }
 		
