@@ -5,7 +5,7 @@ using ParkingSamochodowy;
 namespace UnitTestProject
 {
     [TestClass]
-    public class UnitTest1
+    public class Testy 
     {
         [TestMethod]
         public void Test_Uzytkownik()
@@ -27,7 +27,7 @@ namespace UnitTestProject
             string format = "yyyy-MM-dd";
             Assert.AreEqual("2018-02-02", testowa.DataOd.ToString(format));
             Assert.AreEqual("2018-02-04", testowa.DataDo.ToString(format));
-           
+            Assert.AreEqual(10.00, testowa.ObliczCene());
         }       
 
         [TestMethod]
@@ -49,13 +49,6 @@ namespace UnitTestProject
             Assert.AreEqual(1, testowy._mojeRezerwacje.Count);
         }
 
-        [TestMethod]
-        public void Test_Rezerwacja_Cena()
-        {
-            MiejsceParkingowe m_testowe = new MiejsceParkingowe();
-            Rezerwacja testowa_rezerwacja = new Rezerwacja("2018-02-02", "2018-02-04", m_testowe.NrMiejsca);
-            Assert.AreEqual(10.00, testowa_rezerwacja.ObliczCene());
-        }
 
         [TestMethod]
         [ExpectedException(typeof(NieUzytkownikException))]
@@ -85,7 +78,7 @@ namespace UnitTestProject
             Assert.AreEqual(16, p_testowy.parking.Count);
 
         }
-
+        
 
 
 
