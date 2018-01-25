@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -7,10 +9,12 @@ using System.Threading.Tasks;
 
 namespace ParkingSamochodowy
 {
+    
     public enum Status
     {
         wolne, zajete
     }
+    [Table("Miejsca Parkingowe")]
     public class MiejsceParkingowe
     {
         private int _nrMiejsca;
@@ -38,6 +42,9 @@ namespace ParkingSamochodowy
         {
             return _nrMiejsca.ToString() + " " + _status.ToString();
         }
+
+        [Key]
+        public int MiejsceParkingoweId { get; set; }
 
     }
 }

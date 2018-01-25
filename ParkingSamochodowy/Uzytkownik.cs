@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -8,7 +9,8 @@ using System.Threading.Tasks;
 
 namespace ParkingSamochodowy
 {
-	[Serializable]
+    [Table("Uzytkownicy")]
+    [Serializable]
 	public class Uzytkownik: ICloneable, IComparable
 	{
         
@@ -34,7 +36,7 @@ namespace ParkingSamochodowy
 
         public Uzytkownik(string imie, string nazwisko, string haslo, string nrRejestracyjnyPojazdu, string idUzytkownika):this()
 		{
-			_mojeRezerwacje = null;
+            
 			_imie = imie;
 			_nazwisko = nazwisko;
 			_haslo = haslo;
@@ -55,9 +57,16 @@ namespace ParkingSamochodowy
 
 		public override string ToString()
 		{
-      
-            return Imie + " " + Nazwisko + " " + NrRejestracyjnyPojazdu + " " + Haslo + " " + IDUzytkownika;
-		}
+            System.Text.StringBuilder sb = new StringBuilder();
+            sb.AppendLine("Imie i Nazwisko:  " + _imie+" "+_nazwisko);
+            sb.AppendLine("ID:  " + _IDUzytkownika);
+            sb.AppendLine("Nr rejestracyjny pojazdu:  " + _nrRejestracyjnyPojazdu);
+            foreach (Rezerwacja c in _mojeRezerwacje)
+            {
+                sb.AppendLine(c.ToString());
+            }
+            return sb.ToString();
+        }
 		/// <summary>
 		/// Sprawdzenie poprawnosci hasla
 		/// </summary>
@@ -111,6 +120,37 @@ namespace ParkingSamochodowy
 		}
         [Key]
         public int UzytkownikId { get; set; }
-        
+        /// <summary>
+        /// Zapisuje dane o uzytkownikach do bazy danych
+        /// </summary>
+        public void ZapiszDoBazy()
+        {
+            using (var db = new Model1())
+            {
+                db.Uzytkownik.Add(this);
+                db.SaveChanges();
+            }
+
+        }
+        /// <summary>
+        /// Otwiera baze i wypisuje dane do konsoli
+        /// </summary>
+        public void WypiszUzytkownikow()
+        {
+            using (var db = new Model1())
+            {
+                var query = from b in db.Uzytkownik
+                            orderby b.Imie
+                            select b;
+                            
+
+                Console.WriteLine("===Uzytkownicy(z bazy danych)=== \n");
+                foreach (var item in query)
+                {
+                    Console.WriteLine(item.ToString());
+                }
+            }
+
+        }
     }
 }

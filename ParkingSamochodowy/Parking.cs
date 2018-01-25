@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ParkingSamochodowy
 {
-
+    [Table("Parkingi")]
     public class Parking
     {
 
@@ -34,7 +36,7 @@ namespace ParkingSamochodowy
 		/// Parkowanie, rezerwowanie miejsca
 		/// </summary>
 		/// <param name="a"></param>
-		/// <returns></returns>
+		/// <returns>Nr miejsca parkingowego</returns>
         public string WybierzMiejsce(int a)
         {
             MiejsceParkingowe m = parking.Find(mce => mce.NrMiejsca.Equals(a));
@@ -45,7 +47,7 @@ namespace ParkingSamochodowy
 		/// Pobieranie numeru miejsca, pomocnicza funkcja do GUI
 		/// </summary>
 		/// <param name="a"></param>
-		/// <returns></returns>
+		/// <returns>Miejsce Parkingowe</returns>
 		public MiejsceParkingowe ZwrocMiejsce(int a)
 		{
 			return parking[a];
@@ -64,6 +66,8 @@ namespace ParkingSamochodowy
 
             return sb.ToString();
         }
+        [Key]
+        public int ParkingId { get; set; }
     }
 
 }

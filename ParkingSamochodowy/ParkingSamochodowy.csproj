@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\ParkingSamochodowy.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -55,6 +56,15 @@
     <Compile Include="DataContractAttribute.cs" />
     <Compile Include="IBaza.cs" />
     <Compile Include="MiejsceParkingowe.cs" />
+    <Compile Include="Migrations\201801242321348_InitialCreate.cs" />
+    <Compile Include="Migrations\201801242321348_InitialCreate.Designer.cs">
+      <DependentUpon>201801242321348_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801242355422_InitialCreate1.cs" />
+    <Compile Include="Migrations\201801242355422_InitialCreate1.Designer.cs">
+      <DependentUpon>201801242355422_InitialCreate1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model1.cs" />
     <Compile Include="NieUzytkownikException.cs" />
     <Compile Include="Parking.cs" />
@@ -66,6 +76,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201801242321348_InitialCreate.resx">
+      <DependentUpon>201801242321348_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801242355422_InitialCreate1.resx">
+      <DependentUpon>201801242355422_InitialCreate1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
