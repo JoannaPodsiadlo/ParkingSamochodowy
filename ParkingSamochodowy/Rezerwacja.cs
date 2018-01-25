@@ -43,6 +43,10 @@ namespace ParkingSamochodowy
             _dataDo = Convert.ToDateTime(dataDo);
             wybraneMiejsce = p.WybierzMiejsce(a);
         }
+		/// <summary>
+		/// Obliczanie oplaty za parking
+		/// </summary>
+		/// <returns></returns>
         public double ObliczCene()
         {
             var ile = (_dataDo - _dataOd);

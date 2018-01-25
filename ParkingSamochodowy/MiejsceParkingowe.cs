@@ -30,6 +30,9 @@ namespace ParkingSamochodowy
             _status = Status.wolne;
         }
 
+		/// <summary>
+		/// Zaparkowanie (zmiana statusu na zajete)
+		/// </summary>
         public void Zajmij()
         {
             _status = Status.zajete;

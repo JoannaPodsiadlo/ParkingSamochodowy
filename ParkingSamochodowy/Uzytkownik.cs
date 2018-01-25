@@ -44,6 +44,11 @@ namespace ParkingSamochodowy
 			_IDUzytkownika = idUzytkownika;
 
 		}
+
+		/// <summary>
+		/// Dodaje rezerwacje do listy przechowujacej rezerwacje
+		/// </summary>
+		/// <param name="r"></param>
 		public void Zarezerwuj(Rezerwacja r)
 		{
 			_mojeRezerwacje.Add(r);
@@ -55,13 +60,22 @@ namespace ParkingSamochodowy
       
             return Imie + " " + Nazwisko + " " + NrRejestracyjnyPojazdu + " " + Haslo + " " + IDUzytkownika;
 		}
-
+		/// <summary>
+		/// Sprawdzenie poprawnosci hasla
+		/// </summary>
+		/// <param name="h"></param>
+		/// <returns></returns>
 		public bool PoprawnoscHaslo(string h)
 		{
             return _haslo.Equals(h);
          
         }
-		
+		/// <summary>
+		/// Porownywanie uzytkownikow wzgledem ID, do pozniejszego sortowania
+		/// </summary>
+		/// <param name="a"></param>
+		/// <param name="b"></param>
+		/// <returns></returns>
 		public int Compare(Uzytkownik a, Uzytkownik b)
 		{
 			if (a != null && b != null)
@@ -69,12 +83,20 @@ namespace ParkingSamochodowy
 			else { return 0; }
 
 		}
+		/// <summary>
+		/// Tworzenie plytkiej kopii obiektu uzytkownika
+		/// </summary>
+		/// <returns></returns>
 		public object Clone()
 		{
 			return (Uzytkownik)this.MemberwiseClone();
 		}
 
-		
+		/// <summary>
+		/// Porownywanie uzytkownikow, do sortowania alfabetycznego
+		/// </summary>
+		/// <param name="o"></param>
+		/// <returns></returns>
 		public int CompareTo(object o)
 		{
 			if (o != null)

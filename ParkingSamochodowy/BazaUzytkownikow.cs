@@ -30,26 +30,39 @@ namespace ParkingSamochodowy
 			_baza = new List<Uzytkownik>();
 		}
 
-		
+		/// <summary>
 		/// Dodanie nowego uzytkownika do bazy
-		
+		/// </summary>
 		public void DodajKonto(Uzytkownik u)
 		{
 			_baza.Add(u);
 		}
+		/// <summary>
+		/// Szukanie uzytkownika po numerze ID
+		/// </summary>
+		/// <param name="id"></param>
+		/// <returns></returns>
         public Uzytkownik ZnajdzKonto(string id)
         {
            return  _baza.Find(p => (p.IDUzytkownika.Equals(id)));
         }
-        
-        /// Usuniecie uzytkownika z bazy poprzez podanie jego ID
-        
-        public void UsunKonto(string id)
+
+		/// <summary>
+		///  Usuniecie uzytkownika z bazy poprzez podanie jego ID
+		/// </summary>
+		/// <param name="id"></param>
+
+		public void UsunKonto(string id)
 		{
 			
 			_baza.Remove(_baza.Find(p => (p.IDUzytkownika.Equals(id))));
 		}
 		
+		/// <summary>
+		/// Sprawdzenie czy jest uzytkownikiem poprzez weryfikacje czy dane id jest w bazie
+		/// </summary>
+		/// <param name="id"></param>
+		/// <returns></returns>
 		public bool CzyJestUzytkownikiem(string id)
 		{
 			
@@ -60,13 +73,18 @@ namespace ParkingSamochodowy
 
         }
 	
-        
+        /// <summary>
+		/// Sortowanie bazy uzytkownikow
+		/// </summary>
 		public void Sortuj()
 		{
 			_baza.Sort();
 		}
 		
-		
+		/// <summary>
+		/// Kloniwanie poprzez serializacje do pamieci
+		/// </summary>
+		/// <returns></returns>
 		public object Clone()
 		{
             //return (Uzytkownik)this.MemberwiseClone();
@@ -79,7 +97,10 @@ namespace ParkingSamochodowy
                 return (BazaUzytkownikow)formatter.Deserialize(ms);
             }
         }
-		
+		/// <summary>
+		/// Tworzenie glebiokiej kopii bazy uzytkownikow
+		/// </summary>
+		/// <returns></returns>
 		public BazaUzytkownikow DeepCopy()
 		{
 			BazaUzytkownikow kopia = (BazaUzytkownikow)this.Clone();
@@ -97,7 +118,11 @@ namespace ParkingSamochodowy
 			}
 			return sb.ToString();
 		}
-
+		/// <summary>
+		/// zapis bazy w formacie xml
+		/// </summary>
+		/// <param name="nazwa"></param>
+		/// <param name="b"></param>
         public void ZapiszXML(string nazwa, BazaUzytkownikow b)
         {
             XmlSerializer srlzr = new XmlSerializer(typeof(BazaUzytkownikow));
@@ -105,7 +130,11 @@ namespace ParkingSamochodowy
             srlzr.Serialize(writer, b);
             writer.Close();
         }
-
+		/// <summary>
+		/// Odczyt bazy z XML
+		/// </summary>
+		/// <param name="nazwa"></param>
+		/// <returns></returns>
         static public BazaUzytkownikow OdczytajXML(string nazwa)
         {
             XmlSerializer srlzr = new XmlSerializer(typeof(BazaUzytkownikow));
