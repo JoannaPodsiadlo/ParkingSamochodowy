@@ -36,7 +36,7 @@ namespace ParkingSamochodowy
 		/// Parkowanie, rezerwowanie miejsca
 		/// </summary>
 		/// <param name="a"></param>
-		/// <returns></returns>
+		/// <returns>Nr miejsca parkingowego</returns>
         public string WybierzMiejsce(int a)
         {
             MiejsceParkingowe m = parking.Find(mce => mce.NrMiejsca.Equals(a));
@@ -47,7 +47,7 @@ namespace ParkingSamochodowy
 		/// Pobieranie numeru miejsca, pomocnicza funkcja do GUI
 		/// </summary>
 		/// <param name="a"></param>
-		/// <returns></returns>
+		/// <returns>Miejsce Parkingowe</returns>
 		public MiejsceParkingowe ZwrocMiejsce(int a)
 		{
 			return parking[a];

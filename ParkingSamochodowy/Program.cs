@@ -28,9 +28,11 @@ namespace ParkingSamochodowy
             Console.WriteLine(bazaUzytkownikow);
 
             Rezerwacja r = new Rezerwacja("01/08/2008 14:50:50.42", "04/08/2008 14:50:50.42", 4);
+            u3.Zarezerwuj(r);
             u1.ZapiszDoBazy();
             u2.ZapiszDoBazy();
             u3.ZapiszDoBazy();
+            
             u1.WypiszUzytkownikow();
 			Console.ReadKey();
 		}

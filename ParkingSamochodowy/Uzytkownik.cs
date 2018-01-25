@@ -144,7 +144,7 @@ namespace ParkingSamochodowy
                             select b;
                             
 
-                Console.WriteLine("Uzytkownicy:");
+                Console.WriteLine("===Uzytkownicy(z bazy danych)=== \n");
                 foreach (var item in query)
                 {
                     Console.WriteLine(item.ToString());
